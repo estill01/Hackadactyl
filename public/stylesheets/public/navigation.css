@@ -1,0 +1,24 @@
+/* Navigation Styles, authored by Nova Fabrica, Inc. */
+
+#navigation { clear: both; width: 980px; height: 26px; padding: 0; background: #999999; }
+#navigation ul { list-style: none; margin: 0; padding: 0; z-index: 1000; white-space: nowrap; }
+#navigation ul li { text-align: center; font-size: 12px; 
+  width: 136px; height: 26px; line-height: 26px; 
+  background: #999999; color: #FFFFFF; }
+#navigation a { display: block; width: 136px; text-decoration: none; color: #FFFFFF; }
+#navigation a:hover { background: #CCCCCC; color: #000099; }
+#navigation ul li.active a { color: #FFFFFF; }
+
+/* first tier */
+#navigation ul.first-tier { width: 960px; margin: 0 auto; }
+#navigation ul.first-tier > li { float: left; border-right: 1px solid #FFFFFF; }
+#navigation ul.first-tier > li:first-child { border-left: 1px solid #FFFFFF; }
+
+/* second tier */
+#navigation li ul { position: absolute; left: -999em; }
+#navigation li ul li { border-bottom: 1px solid #FFFFFF; margin: 0; }
+#navigation li:hover > ul { left: auto; height: auto; border-top: 1px solid #FFFFFF; }
+#navigation li ul li.active { background: #000000; }
+
+/* IE7 bugfix */
+*:first-child+html #navigation ul.second-tier { margin-left: -68px; } /* = width/2 */

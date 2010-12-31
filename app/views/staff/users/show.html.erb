@@ -1,0 +1,22 @@
+<%- @page_title ||= "View User: #{@person.full_name}" -%>
+
+<%= link_to('&laquo; Back to List', staff_people_path, :class => 'back-link') %>
+
+<div class="user person">
+  <h1><%= @page_title %></h1>
+  
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><%= @person.name %></td>
+    </tr>
+    <tr>
+      <td>Title</td>
+      <td><%= @person.title %></td>
+    </tr>
+    <tr>
+      <td>Biography</td>
+      <td><%= @person.biography %></td>
+    </tr>
+  </table>
+</div>

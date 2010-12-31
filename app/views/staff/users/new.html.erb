@@ -1,0 +1,15 @@
+<%- @page_title = "Create user" -%>
+
+<%= link_to("&#171; Back to List".html_safe, staff_users_path, :class => 'back-link') %>
+
+<div class="user new">
+  <h1><%= @page_title %></h1>
+
+  <%= form_for([:staff, @user]) do |f| -%>
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+    <div id="operations">
+      <%= submit_tag("Create User") %>
+      <%= cancel_button(staff_users_path) %>
+    </div>
+  <%- end -%>
+</div>

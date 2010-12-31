@@ -1,0 +1,185 @@
+/* Public General Styles, authored by Nova Fabrica, Inc.     */
+
+/* Static Pages */
+div.static { margin-top: 25px; }
+div.static h2 { color: #FF6600; font-size: 16px; }
+div.static h4 { margin-bottom: 0; }
+div.static h4 + p { margin-top: 0; }
+div.static .wrapper { border: 2px solid #CCCCCC; padding: 0 1em 1em 1em; }
+div.static p.action { text-align: center; padding: 1.5em; }
+div.static p.action a { color: #FF6600; font-size: 18px; }
+div.static table { width: 400px; margin-top: 50px; }
+div.static table tr th,
+  div.static table tr td { padding: 1em; border: 1px solid #FFFFFF; text-align: center; }
+div.static table tr.odd th, 
+  div.static table tr.odd td { background: #D3DFF1; }
+div.static table tr.even th, 
+  div.static table tr.even td { background: #D2D1D0; }
+
+div.static table tr.header th { background: #D2D1D0; }
+div.static table tr th.row-header { font-weight: normal; background: #D2D1D0; }
+div.static table tr td.blank { background: none; }
+div.static table tr .nowrap { white-space: nowrap; }
+div.static .button a { display: block; width: 100px; line-height: 2em;
+  text-align: center; padding: 5px; background: #FF6600; color: #FFFFFF; }
+
+.home .section { float: left; width: 445px; height: 300px; margin: 0 0 25px 0; 
+  padding: 10px; border: 1px solid #CCCCCC; }
+.home .section h2 { color: #555555; margin-top: 0; }
+.home .section ul { font-size: 12px; margin: 2em 0 0; padding: 0 0 0 1.5em; }
+.home #take-a-tour { margin-right: 25px; }
+.home #example-search { width: 439px; height: 170px; margin: 40px 5px;
+  background: url("../../images/example_search.png") no-repeat 0 0; }
+.home #get-listed { margin-right: 25px; }
+.home #example-manufacturer { width: 422px; height: 280px; margin: 10px;
+  background: url("../../images/example_manufacturer.png") no-repeat 0 0; }
+#subscribe .button { padding: 25px 0 25px 180px; }
+#help p.question { font-size: 1.1em; font-weight: bold; margin-bottom: 0.5em; }
+#help p.answer { margin: 0 0 2em 0; }
+#contact .wrapper { padding: 20px; }
+#contact .address { margin-bottom: 3em; }
+#contact .contact { margin-bottom: 2em; }
+
+#subscribe #benefits { float: left; width: 450px; }
+#subscribe #pricing { float: right; width: 430px; }
+div.static #pricing table { margin-top: 1em; }
+#advertise #benefits { float: left; width: 450px; }
+#advertise #pricing { float: right; width: 430px; }
+.bulk-material-pending {color:#FF1B0C; font-weight: bold;}
+
+/* Access */
+.access { width: 350px; margin: 100px auto; }
+.access fieldset { border: none; margin: 0; }
+.access.forgot { width: inherit; margin: 2em 0 0; }
+.access th { text-align: right; }
+.access label { width: auto; }
+.access input { margin-right: 0; }
+.access input[type="submit"] { margin: 0 40px 0 0; }
+#password_idea { font-weight: bold; }
+
+/* Main Menus */
+.menu { margin-left: 380px; }
+.menu h2 { margin-top: 2em; }
+.menu ul { margin-top: 1em; padding: 0 0 0 20px; list-style: none; }
+.menu ul li { margin-bottom: 0.5em; width: 160px; text-align: center; }
+.menu ul li a { display: block; padding: 0.75em;
+  background: #000099; color: #FFFFFF; 
+  border: 1px solid #4A0A2A; text-decoration: none; }
+.menu ul li a:hover { background: #FF6600; }
+.company.status { border: 1px solid #FF6600; 
+    background: #DDDDDD; padding: 0 0.5em; margin-bottom: 1em; 
+    font-weight: bold; text-align: center;}
+
+/* Form Additions */
+.manufacturer label:after { content: ": "; }
+#facility-profile label:after { content: ""; }
+.manufacturer .services ul { width: 440px; }
+.subscriber .account-fields { margin-top: 5em; }
+
+/* Manufacturer Display */
+.company.show .wrapper { margin-top: 0; }
+.company.show .details { float: left; margin-right: 10px;}
+.company.show .details dt { width: 90px;}
+.company.show .details dd { max-width: 425px; }
+.company.show .attribute { margin-bottom: 1em; }
+.company.show .attributes { float: right; width: 375px; padding-left: 10px; 
+  font-size: 11px; border-left: 1px solid #CCCCCC; }
+.company.show .attribute h2 { background: #FF6600; color: #FFFFFF; 
+  font-size: 10px; text-align: center;
+  margin: 0 0 0.5em 0; padding: 3px 6px; }
+.company.show .attribute h2 span { text-transform: uppercase; letter-spacing: 2px; }
+.company.show .attribute h2 a { float: right; }
+.company.show .attribute h3 { font-size: 10px; margin: 0 0 2px; font-weight: normal; }
+.company.show .attributes ul { margin: 0 0 1em 2em; list-style: disc; 
+  max-width: 350px; }
+.company.show .attributes ul li { margin: 0; }
+
+/* Facility Display */
+.facility.show .wrapper { margin-top: 2em; }
+.facility.show .details { float: left; margin-right: 10px;}
+.facility.show .details dt { width: 90px;}
+.facility.show .details dd { max-width: 425px; }
+.facility.show .attribute { margin-bottom: 1em; }
+.facility.show .attributes { float: right; width: 375px; padding-left: 10px; 
+  font-size: 11px; border-left: 1px solid #CCCCCC; }
+.facility.show .attribute h2 { background: #FF6600; color: #FFFFFF; 
+  font-size: 10px; text-align: center;
+  margin: 0 0 0.5em 0; padding: 3px 6px; }
+.facility.show .attribute h2 span { text-transform: uppercase; letter-spacing: 2px; }
+.facility.show .attribute h2 a { float: right; }
+.facility.show .attribute h3 { font-size: 10px; margin: 0 0 2px; font-weight: normal; }
+.facility.show .attributes ul { margin: 0 0 1em 2em; list-style: disc; 
+  max-width: 350px; }
+.facility.show .attributes ul li { margin: 0; }
+.equipment-other-details {margin:10px 0; border: 1px solid #999;}
+
+/* Facility Capability Edit */
+.capability.edit li {margin-bottom:5px;}
+.capability.edit .category { clear: both; padding-bottom: 0.5em; 
+  margin-bottom: 0.5em; 
+  border-bottom: 1px solid #CCCCCC; }
+.capability.edit .category h3 { margin: 0; }
+.capability.edit .category ul { float: left; margin: 0 0 0 10px; padding: 0; 
+  width: 290px; }
+.capability.edit .category ul li { list-style: none; font-size: 0.8em;  }
+
+.capability.edit #equipment-list h3 { margin: 0.5em 0 0; font-size: 10px; 
+  text-transform: uppercase; }
+.capability.edit #equipment-list ul { margin: 0 0 1em; padding: 0.5em 0; 
+  list-style: none; border-bottom: 1px dotted #999999; }
+.capability.edit #equipment-list ul li { margin: 0 2em 2px; }
+.capability.edit #equipment-list .action { float: none; font-size: 9px; 
+    padding: 1px 3px; margin: 0 3px; }
+
+.capability.edit #credentials-list ul { margin: 0 0 1em; padding: 0.5em 0; 
+  list-style: none; }
+.capability.edit #credentials-list ul li { margin: 0 1em 2px; }
+.capability.edit #credentials-list .action { float: none; font-size: 9px; 
+  padding: 1px 3px; margin: 0 3px; }
+
+/* Contact Display */
+.contact.show .wrapper { margin-top: 0; }
+.contact.show .details { float: left; margin-right: 10px;}
+.contact.show .details dt { width: 90px;}
+.contact.show .details dd { max-width: 425px; }
+.contact.show .attribute { margin-bottom: 1em; }
+.contact.show .attributes { float: right; width: 375px; padding-left: 10px; 
+  font-size: 11px; border-left: 1px solid #CCCCCC; }
+.contact.show .attribute h2 { background: #FF6600; color: #FFFFFF; 
+  font-size: 10px; text-align: center;
+  margin: 0 0 0.5em 0; padding: 3px 6px; }
+.contact.show .attribute h2 span { text-transform: uppercase; letter-spacing: 2px; }
+.contact.show .attribute h2 a { float: right; }
+.contact.show .attribute h3 { font-size: 10px; margin: 0 0 2px; font-weight: normal; }
+.contact.show .attributes ul { margin: 0 0 1em 2em; list-style: disc; 
+  max-width: 350px; }
+.contact.show .attributes ul li { margin: 0; }
+
+/* Search (used by subscriber area) */
+.search { margin-top: 1.5em; }
+#ajax-loading { margin: 3px; }
+#search_results { clear: both; }
+.result-count { margin: 1em 0; font-size: 0.8em; font-weight: bold; }
+.company.search label { width: 60px; }
+.company.search #manufacturer_name { margin-right: 25px; }
+.contact.search label { width: auto; margin-right: 25px; }
+.contact.search input { width: auto; margin-right: 25px; }
+#add-criterion { margin: 0 0 20px 0; padding: 0.5em; }
+#add-criterion .criterion-category, 
+#add-criterion .criterion-value { float: left; margin-right: 10px; }
+#add-criterion .criterion-category label, 
+#add-criterion .criterion-value label { width: auto; margin-right: 10px; 
+  padding-top: 3px; }
+#add-criterion a.button { float: left; margin-left: 10px; padding: 2px 5px; 
+  background: #CCCCCC; color: #000099; border: 1px solid #000099; 
+  text-decoration: none; }
+#search-criteria { clear: both; margin: 20px 0 0; padding: 0.5em; }
+#search-criteria .current { float: left; }
+.criterion { float: left; margin: 0 10px 10px 0; padding: 2px 5px; 
+  background: #DEDEDE; border: 1px solid #333333; 
+  font-size: 10px; line-height: 12px; 
+  border-radius: 0.5em; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em; }
+.criterion img { margin: 0 0 0 7px; vertical-align: top; }
+.criterion.remove-criterion { cursor: pointer; }
+.criterion.clear-all { cursor: pointer; }
+

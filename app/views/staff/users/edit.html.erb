@@ -1,0 +1,15 @@
+<%- @page_title = "Edit User: #{@user.full_name}" -%>
+
+<%= link_to('&laquo; Back to List'.html_safe, staff_users_path, :class => 'back-link') %>
+
+<div class="administrator edit">
+  <h1><%= @page_title %></h1>
+
+  <%= form_for([:staff, @user]) do |f| -%>
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+    <div id="operations">
+      <%= submit_tag "Update User" %>
+      <input type="button" value="Cancel" class='cancel-button' onclick="window.location.href='<%= staff_users_path %>';" />
+    </div>
+  <%- end -%>
+</div>

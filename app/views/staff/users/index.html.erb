@@ -1,0 +1,34 @@
+<%- @page_title = "Users" -%>
+
+<div class="administrator listing">
+  <h1><%= @page_title %></h1>
+  
+  <%= link_to("Create New User", new_staff_user_path, :class => 'action') %>
+  
+	<table class="list">
+	  <tr>
+	    <th>First Name</th>
+	    <th>Last Name</th>
+	    <th>Username</th>
+	    <th>Email</th>
+	    <th>&nbsp;</th>
+	    <th>&nbsp;</th>
+	  </tr>
+
+	  <%- @users.each do |user| -%>
+	  <tr>
+	    <td><%= user.first_name %></td>
+	    <td><%= user.last_name %></td>
+	    <td><%= user.username %></td>
+	    <td><%= user.email %></td>
+	    <td><%= link_to('Edit', edit_staff_user_path(user), :class => 'action') %></td>
+	    <td><%= link_to('Delete', delete_staff_user_path(user), :class => 'action') %></td>
+	  </tr>
+	  <%- end -%>
+	</table>
+
+	<div class="pagination">
+	  <%= will_paginate(@users, :class => 'apple_pagination') %>
+	</div>
+	
+</div>

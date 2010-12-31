@@ -1,0 +1,26 @@
+/* Tabbed Navigation Styles */
+
+.tabbed-nav {float:left;}
+.tabbed-nav ul { margin: 0; padding: 10px 10px 0; list-style: none; }
+.tabbed-nav li { display: inline; font-weight: bold; }
+
+.tabbed-nav li a { float: left; margin: 0 0 -1px 10px; padding: 0 0 0 10px;
+  background: url('../../images/bg-uptab-left.gif') left top no-repeat;
+  text-decoration: none; }
+.tabbed-nav li a span { display:block; padding: 5px 15px 4px 6px; color: #F0F0F0;
+  background: url('../../images/bg-uptab-right.gif') right top no-repeat; }
+
+.tabbed-nav li a:hover { background-position: left -39px; }
+.tabbed-nav li a:hover span { color: #000000; background-position: right -39px; }
+
+.tabbed-nav li.selected a { background-position: left -78px; }
+.tabbed-nav li.selected a span { padding-bottom: 5px; color: #000000; 
+  background-position: right -78px; }
+
+.tabbed-box { clear: both; border: 1px solid #CCCCCC; border-top: 0; min-height: 400px;
+  background: url('../../images/bg-tab-box.gif') left top repeat-x;
+  padding: 1.25em 10px 1em 10px; margin: 0; margin-top:-1px;
+  float:left;
+  width:918px;}
+.tabbed-box table { clear: both; }
+

@@ -1,0 +1,204 @@
+/* Atlas Staff Area Stylesheet                   */
+/* by Nova Fabrica, Inc.                         */
+/* This stylesheet is for site-wide UI elements  */
+
+.back-link { font-size: 0.8em; margin-bottom: 1em; }
+
+span.status { display: block; width: 10px; height: 10px; 
+  margin: 0.25em auto; padding: 0; border: 1px solid #000000; }
+span.status.true  { background: green; color: green; }
+span.status.false { background: red; color: red; }
+
+span.online  { color: green; }
+span.offline { color: red; background: none; }
+
+.offline { background: #EEEEEE; }
+.offline, .offline a { color: #999999; }
+
+.odd { background: #FFFFFF; }
+.even { background: #DDDDDD; }
+
+.draggable { cursor: move; }
+
+.clearfix { clear: both; display: block;}
+
+.highlight { font-weight: normal; background: #FFE97A; }
+
+/* Errors */
+#errorExplanation { display: table; padding: 0; margin: 0.5em 1em 1em 0;
+  border: 2px solid #FFA719; background-color: #F0F0F0; color: #333333; 
+  border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;}
+#errorExplanation h2 { padding: 5px; margin: 0 0 0.5em 0;
+  text-align: left; font-weight: bold; background-color: #FFA719; color: #FFFFFF; }
+#errorExplanation p { margin: 0.5em; padding: 0; font-size: 0.9em;}
+#errorExplanation ul { margin: 0 1em 1em 0; padding-left: 2em; }
+#errorExplanation ul li { font-size: 0.9em; }
+.fieldWithErrors { display: table; padding: 1px; background: #FFA719; }
+
+/* large action buttons */
+a.action { float: right; padding: 2px 7px; margin: 0 0 1em 1em; 
+  background: #E57D15; color: #FFFFFF;  border: 1px solid #4A0A2A;
+  text-decoration: none; font-size: 0.8em; text-align: center; 
+  border-radius: 0.5em; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em; }
+a.action:hover { background: #FF9831; }
+a.action + a.action { clear: right; }
+a.action-left-align { float: left; padding: 2px 7px; margin: 0 0 1em 0em; 
+  background: #E57D15; color: #FFFFFF;  border: 1px solid #4A0A2A;
+  text-decoration: none; font-size: 0.8em; text-align: center; 
+  border-radius: 0.5em; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em; }
+
+
+/* small action buttons */
+table tr td a.action { font-size: 0.75em; 
+  float: none; display: block; width: 5em; padding: 1px 2px 2px; margin: 2px auto;
+  border-radius: 0.4em; -moz-border-radius: 0.4em; -webkit-border-radius: 0.4em; }
+
+/* PDF icon with text next to it */
+.pdf-icon { float: left; height: 50px;}
+.pdf-text { float: left; margin-top: 1em; margin-left: 0.5em;}
+
+/* Tables */
+table tr th { padding: 3px; white-space: nowrap; vertical-align: top; text-align: left;}
+table tr td { padding: 3px; border: 1px solid #CCCCCC; }
+table tr th.wrap, table tr td.wrap { white-space: normal; }
+
+table tr td p { margin-top: 0; }
+
+table.outline tr td { border: 1px solid #CCCCCC; }
+
+table.clean { line-height: 1.5em; min-width: 600px; }
+table.clean tr th { text-align: right; padding-right: 1em; border: none; }
+table.clean tr td { padding: 3px; border: none; }
+
+/* Table Listings */
+table.list { width: 100%; clear: both; }
+table.list tr th { background: #E57D15; color: #FFFFFF; text-align: left; font-size: 0.8em; }
+table.list tr { background: #FFFFFF; }
+table.list tr:hover { background: #FFEEAA; }
+table.list tr td img { vertical-align: top; }
+table.list img { max-height: 50px; }
+table.list img.loading_gif { height: 15px; margin-left: 10px; }
+
+/* sortable headers */
+.list th>a:link { color: #000000; text-decoration: none; }
+.list th>a:hover { text-decoration: underline; }
+
+div.show table { clear: both; margin: 0 auto; }
+div.show table tr td, div.show table tr th { border: none }
+div.show ul { margin: 0; padding: 0; }
+div.show .wrapper { clear: both; margin-top: 0; padding: 1em; }
+div.show .details dl { clear: both; padding-bottom: 1em; }
+div.show .details dt { float: left; width: 100px;}
+div.show .details dd { float: left; margin-left: 1em; }
+
+div.edit table { clear: both; margin: 0 auto; }
+div.edit table tr td, div.edit table tr th { border: none }
+div.edit label { margin: 0; }
+div.edit ul { margin: 0; padding: 0; }
+
+div.new table { clear: both; margin: 0 auto; }
+div.new table tr td, div.new table tr th { border: none }
+div.new label { margin: 0; }
+div.new ul { margin: 0; padding: 0; }
+
+dt {display:inline; float:left; width:200px; padding:0px; margin:0px; text-align:right;}
+dd {display:inline; }
+dd div{display:inline;}
+.center-form {width:720px; margin:30px auto 0 auto;}
+#operations {width:300px; margin:auto; text-align:center;}
+
+.tabs li {
+  float:left;
+  list-style-type: none;
+  width:150px;
+  padding:10px;
+  margin-right:10px;
+  text-align:center;
+  background:#A9867C;
+  border-top-left-radius:7px;
+  border-top-right-radius:7px;
+  -moz-border-radius-topleft:7px;
+  -moz-border-radius-topright:7px;
+}
+
+.tabs a {
+  color:black;
+  font-weight: bold;
+}
+
+/* tab pane */
+.panes > div {
+	display:none;
+	border:1px solid #666;
+	min-height:150px;
+	padding:15px 20px;
+}
+
+#photo-inputs {
+  display:block;
+  border:none;
+  padding:0px;
+}
+
+.photos-display-list {
+  width:900px;
+  float:left;
+}
+
+.photos-display-list a.action {
+  float:none;
+  clear:both;
+}
+
+.photo-thumb, .photo-thumb-placeholder {
+  background:gray;
+  width:140px;
+  height:130px;
+  float:left;
+  border: 1px solid #999;
+  margin:4px;
+  position:relative;
+}
+
+.photo-thumb img {
+  width:100px;
+  margin:10px auto;
+  display:block;
+}
+
+.photo-thumb .delete-image-link {
+  position:absolute;
+  right:5px;
+  bottom:5px;
+  margin:0px;
+  font-size:5px;
+}
+
+.photo-thumb-placeholder {
+  opacity:0.5;
+  list-style-type: none;
+  border: 1px solid yellow;
+}
+
+.photo-placeholder {
+  background:#FFF;
+  list-style-type: none;
+  width:148px;
+  height:114px;
+  border: 1px solid #999;
+}
+
+.add-image-input.action {
+  font-size:12px;
+  background:#F0F0F0;
+  color:black;
+  margin:10px 0px 0px 0px;
+  padding:10px 5px;
+  display:block;
+  font-weight:bold;
+}
+
+.remove-file-input.action {
+  float:none;
+}
+

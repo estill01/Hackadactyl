@@ -1,0 +1,8 @@
+/* Navigation Styles */
+
+#navigation { padding: 0; margin: 0 0 2em 0; text-align: center;}
+#navigation ul { padding: 0; margin: 0; list-style: none; }
+#navigation ul:first-child { }
+#navigation ul li { display: inline; margin-right: 1em; 
+  color: #007598; font-weight: bold; }
+#navigation ul li a { font-weight: normal;}

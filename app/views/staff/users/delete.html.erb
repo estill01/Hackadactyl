@@ -1,0 +1,17 @@
+<%- @page_title = "Delete User: #{@user.full_name}" -%>
+
+<%= link_to('&laquo; Back to List'.html_safe, staff_users_path, :class => 'back-link') %>
+
+<div class="administrator delete">
+  <h1><%= @page_title %></h1>
+  <p>Are you sure you want to <strong>permanently</strong> delete this user?</p>
+  
+  <p class="item"><%= @user.full_name %></p>
+  
+  <%- form_tag(staff_user_path(@user), :method => :delete) do -%>
+    <div id="operations">
+      <%= submit_tag "Delete Manufacturer" %>
+      <input type="button" value="Cancel" class='cancel-button' onclick="window.location.href='<%= staff_users_path %>';" />
+    </div>
+  <%- end -%>
+</div>

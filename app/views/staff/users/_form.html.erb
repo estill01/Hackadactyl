@@ -1,0 +1,60 @@
+<%= error_messages_for(:user) %>
+
+<div class="center-form">  
+  <dl>
+    <dt><%= f.label 'first_name' %></dt>
+    <dd><%= f.text_field(:first_name) %></dd>
+  </dl>
+  
+  <dl>
+    <dt><%= f.label 'last_name' %></dt>
+    <dd><%= f.text_field(:last_name) %></dd>
+  </dl>
+  
+  <% if f.object.new_record? %>
+    <dl>
+      <dt><%= f.label 'email' %></dt>
+      <dd><%= f.text_field(:email) %></dd>
+    </dl>
+    <dl>
+      <dt><%= f.label 'username' %></dt>
+      <dd><%= f.text_field(:username) %></dd>
+    </dl>
+  <% else %>
+    <dl>
+      <dt><%= f.label 'username' %></dt>
+      <dd><%= f.object.username%></dd>
+    </dl>
+    
+    <dl>
+      <dt><%= f.label 'previous_password' %></dt>
+      <dd><%= f.password_field(:previous_password) %></dd>
+    </dl>
+    
+    <dl>
+      <dt><%= f.label 'email' %></dt>
+      <dd><%= f.password_field(:email) %></dd>
+    </dl>
+    
+    <dl>
+      <dt><%= f.label 'email_confirmation' %></dt>
+      <dd><%= f.password_field(:email_confirmation) %></dd>
+    </dl>
+    
+    <% end %>
+    <dl>
+      <dt><%= f.label 'password' %></dt>
+      <dd><%= f.password_field(:password) %></dd>
+    </dl>
+  	<dl>
+      <dt><%= f.label 'password_confirmation', 'Password Confirmation' %></dt>
+      <dd><%= f.password_field(:password_confirmation) %></dd>
+    </dl>
+    
+    <div>
+      <span><%=f.object.new_record? ?  "Having trouble picking a password?" : "Changing your password?" %></span><br />
+        May we suggest:
+        <span id="password_idea"><%= @password_idea %></span>&nbsp;&nbsp;
+        (<span id="get_idea"><a id ="password_idea_link" href="/staff/access/get_password_idea">get another idea</a></span><span id="getting_idea" style="display: none;">One moment...</span>)
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title><%= BRAND %> - <%= @page_title || "Staff Area" %></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta name="copyright" content="Copyright <%= Time.now.year -%>, <%= COMPANY %>" />
+    <meta name="author" content="Nova Fabrica, Inc." />
+    <meta name="version" content="1.0" />
+    <meta name="robots" content="nofollow,noindex" />
+    <%= csrf_meta_tag %>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <%= include_stylesheets :staff, :media => 'all' %>
+    <%= include_javascripts :general %>
+    <%= yield :head %>
+
+			<!--[if IE]>
+			<style type="text/css">
+				fieldset {
+				position: relative;
+				padding:15px;
+				}
+				legend {
+				position: absolute;
+				top: -.5em;
+				left: .2em;
+				}
+			</style>
+			<![endif]-->
+			
+  </head>
+  <body class="staff<%= " #{@body_class}" if @body_class %>">
+    <div id="header">
+      <h1><%= BRAND %> Staff Area</h1>
+    </div>
+    <div id="mainblock">
+      <%= render(:partial => 'layouts/staff_navigation') %>
+      <div id="messages">
+        <% flash.each do |key, msg| -%>
+          <%= content_tag(:div, msg, :class => "#{key} message", :id => "#{key}_message") %>
+        <% end -%>
+      </div>
+      <div id="pagecontent">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="footer">
+      &nbsp;
+    </div>
+  </body>
+</html>

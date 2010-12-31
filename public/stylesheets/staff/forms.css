@@ -1,0 +1,36 @@
+/* Atlas Staff Area Stylesheet            */
+/* by Nova Fabrica, Inc.                  */
+/* This stylesheet is for form elements   */
+
+form table tr th { text-align: right; padding-right: 5px; }
+input[type="submit"] { margin: 2em 1em 1em 0px;}
+input.cancel-button{ margin: 2em 0em 1em 0px;}
+
+th.optional {font-weight: normal;}
+form .instructions { font-size: 0.7em; font-style: italic; }
+span.instructions { font-size: 0.7em; font-style: italic; }
+ul.checkbox-fields { float: left; list-style: none; }
+ul.checkbox-fields li { float: left; clear: both; }
+
+#additional-conditions {
+	background:#D0D0D0; 
+	border: 1px solid #999;
+	width:300px;
+	padding:5px;
+	margin-bottom:10px;
+}
+
+#additional-conditions ul {
+	list-style-type: square;
+	font-size:10px;
+}
+
+
+#manage-facilties-list {
+	list-style-type:none;
+}
+
+div.services.edit fieldset { margin-bottom: 2em; border: 1px solid #FF6600; margin-top:10px; }
+
+div.services.edit fieldset ul {float:left; margin-right:120px; list-style-type: none;}
+div.services.edit fieldset ul li {margin-bottom:2px;}

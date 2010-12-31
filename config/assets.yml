@@ -1,0 +1,27 @@
+javascript_compressor: "closure"
+
+javascripts:
+    general:
+        - public/javascripts/jquery.js
+        - public/javascripts/jquery.ui.js
+        - public/javascripts/rails.js
+        - public/javascripts/application.js
+        - public/javascripts/jquery.query.js
+        - public/javascripts/jquery.url.js
+        - public/javascripts/staff_order_by.js
+        - public/javascripts/tabs.js
+        
+stylesheets:
+    main:
+        - public/stylesheets/master.css
+    public:
+        - public/stylesheets/public/*.css
+    staff:
+         - public/stylesheets/staff/main.css
+         - public/stylesheets/staff/general.css
+         - public/stylesheets/staff/navigation.css
+         - public/stylesheets/staff/tabbed_navigation.css
+         - public/stylesheets/staff/forms.css
+         - public/stylesheets/staff/page_styles.css
+         - public/stylesheets/staff/pagination.css
+

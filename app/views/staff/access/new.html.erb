@@ -1,0 +1,22 @@
+<% @page_title = "Staff Login" %>
+
+<div class="login form">
+  <%= form_tag(:action => "create") do -%>
+  <table>
+    <tr>
+      <td>Username:</td>
+      <td colspan="2"><%= text_field_tag(:username, nil, {:maxlength => 20}) %></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td colspan="2"><%= password_field_tag(:password) %></td>
+    </tr>
+  
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="Log In" /></td>
+      <td><%= link_to('Forgot my password', :action => 'forgot_password') %></td>
+    </tr>
+  </table>
+  <% end -%>
+</div>

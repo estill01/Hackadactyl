@@ -1,0 +1,19 @@
+<%- @page_title = "Main Menu" -%>
+
+<%= javascript_tag("function writeText(objName, txt) { if (document.getElementById) { x = document.getElementById(objName); x.innerHTML = ''; x.innerHTML = txt; } }") -%>
+
+<div id="main-menu">
+  <h2>Main Menu</h2>
+  <div id="status"></div>
+  
+  <ul class="left">
+  </ul>
+  <ul class="right">
+    <li><%= link_to("Users", staff_users_path(:page => 1), 
+            :onmouseover => "writeText('status', 'Manage Users');", 
+            :onmouseout  => "writeText('status', '');") %>
+    </li>
+  </ul>
+  <div class="clear"></div>
+  
+</div>

@@ -1,0 +1,132 @@
+/* Page styles                                              */
+/* This stylesheet is for page-specific styles and for      */
+/* styles that override global styles for a particular page */
+
+/* Main menu */
+#main-menu { margin: 50px 0; }
+#main-menu h2 { text-align: center; }
+#main-menu h3 { text-align: center; }
+#main-menu ul { margin-top: 1em; padding: 0; list-style: none; }
+#main-menu ul li { margin-bottom: 2em; width: 200px; }
+#main-menu ul li a { display: block; padding: 1em; 
+  background: #E57D15; color: #FFFFFF; 
+  border: 1px solid #4A0A2A; text-decoration: none; }
+#main-menu ul li a:hover { background: #FF9831; }
+#main-menu #status { text-align: center; padding: 0.5em 1em;
+  width: 400px; height: 1.25em; margin: 0 auto;}
+
+/* ul in a table, not floated */
+#main-menu table { width: 100%; margin-top: 1em;}
+#main-menu table tr td { border: none; width: 50%;}
+#main-menu table ul li { margin-left: 45px; }
+
+/* ul floated, not in a table */
+#main-menu ul.left { float: left; margin-left: 240px; }
+#main-menu ul.right { float: left; margin-left: 50px; }
+#main-menu ul.center { margin-left: 390px; }
+#main-menu ul.bottom { clear: both; margin-left: 390px; }
+
+
+/* Login / Password */
+.login { margin: 100px 315px; width: 350px; }
+.login table tr th, .login table tr td { border: 0; }
+.login a { margin-left: 60px; font-size: 0.85em;}
+.login input[type="submit"] { margin: 0; }
+#password_idea { font-weight: bold; }
+
+/* Manufacturer */
+.manufacturer.show .wrapper { clear: both; margin-top: 0; }
+.manufacturer.show .details { float: left; margin-right: 10px; font-size: 12px; }
+.manufacturer.show .details dl { clear: both; padding-bottom: 1em; }
+.manufacturer.show .details dt { float: left; font-weight: bold; width: 90px; }
+.manufacturer.show .details dd { float: left; width: 400px; }
+
+.manufacturer.show .status { border: 1px solid #E57D15; 
+  background: #DDDDDD; padding: 0 0.5em; margin-bottom: 1em; 
+  font-weight: bold; text-align: center; }
+.manufacturer.show .status #approval-area a.action { float: left; }
+
+.manufacturer.show .attributes { float: right; width: 325px; padding-left: 10px;
+  border-left: 1px solid #CCCCCC; height:500px;}
+.manufacturer.show .attribute h2 { background: #E57D15; color: #FFFFFF; 
+  margin: 0; padding: 3px 6px; }
+.manufacturer.show .attribute h2 span { font-size: 10px; text-transform: uppercase; 
+  letter-spacing: 2px; }
+.manufacturer.show .attribute h2 a { float: right; font-size: 10px; }
+
+.manufacturer.show .attributes ul { margin: 0.5em 0 2em 2em; font-size: 11px; }
+
+
+/* Facilities */
+.facility.show .wrapper { margin-top: 2em; }
+.facility.show .details { float: left; margin-right: 10px; font-size: 12px; }
+.facility.show .details dt { width: 90px; }
+.facility.show .details dd { max-width: 425px; }
+.facility.show .details ul { margin: 0; padding: 0; list-style: none; }
+.facility.show .attributes { float: right; width: 325px; padding-left: 10px;
+  font-size: 11px; border-left: 1px solid #CCCCCC; }
+.facility.show .attribute { margin-bottom: 1em; }
+.facility.show .attribute h2 { background: #E57D15; color: #FFFFFF; 
+  font-size: 10px; text-align: center; 
+  margin: 0 0 0.5em 0; padding: 3px 6px; }
+.facility.show .attribute h2 span { text-transform: uppercase; letter-spacing: 2px; }
+.facility.show .attribute h2 a { float: right; }
+.facility.show .attribute h3 { font-size: 10px; margin: 0 0 2px; font-weight: normal; }
+.facility.show .attributes ul { margin: 0 0 1em 2em; max-width: 300px; }
+.equipment-other-details {margin:10px 0 10px 5px; padding:3px; border: 1px dotted #999;}
+
+
+
+/* Facility Capability Edit */
+.capability.edit .category { clear: both; padding-bottom: 0.5em; 
+  margin-bottom: 0.5em; 
+  border-bottom: 1px solid #CCCCCC; }
+.capability.edit label { float: left; width: 200px; margin: 0;}
+.capability.edit .category h3 { margin: 0; }
+.capability.edit .category ul { float: left; margin: 0 0 0 10px; padding: 0; 
+  width: 290px; }
+.capability.edit .category ul li { list-style: none; font-size: 0.8em;  }
+
+.capability.edit fieldset legend { font-size: 1em; color: #E57D15; }
+.capability.edit fieldset { margin-bottom: 2em; border: 1px solid #E57D15; }
+
+.capability.edit #equipment-list h3 { margin: 0.5em 0 0; font-size: 10px; 
+  text-transform: uppercase; }
+.capability.edit #equipment-list ul { margin: 0 0 1em; padding: 0.5em 0; 
+    list-style: none; border-bottom: 1px dotted #999999; }
+.capability.edit #equipment-list ul li { margin: 0 2em 3px; font-size: 11px; }
+.capability.edit #equipment-list .action { float: none; font-size: 9px; 
+  padding: 1px 3px; margin: 0 3px; }
+
+.capability.edit #credentials-list ul { margin: 0 0 1em; padding: 0.5em 0; 
+  list-style: none; }
+.capability.edit #credentials-list ul li { margin: 0 1em 3px; font-size: 11px; }
+.capability.edit #credentials-list .action { float: none; font-size: 9px; 
+  padding: 1px 3px; margin: 0 3px; }
+
+/* Contacts */
+.contact.show .wrapper { clear: both; margin-top: 0; }
+.contact.show .details { float: left; margin-right: 10px; font-size: 12px; }
+.contact.show .details dl { clear: both; padding-bottom: 1em; }
+.contact.show .details dt { float: left; font-weight: bold; width: 110px; }
+.contact.show .details dd { float: left; width: 400px; }
+
+.contact.show .status { border: 1px solid #E57D15; 
+  background: #DDDDDD; padding: 0 0.5em; margin-bottom: 1em; 
+  font-weight: bold; text-align: center; }
+.contact.show .status #approval-area a.action { float: left; }
+
+.contact.show .attributes { float: right; width: 325px; padding-left: 10px;
+  border-left: 1px solid #CCCCCC; height:500px;}
+.contact.show .attribute h2 { background: #E57D15; color: #FFFFFF; 
+  margin: 0; padding: 3px 6px; }
+.contact.show .attribute h2 span { font-size: 10px; text-transform: uppercase; 
+  letter-spacing: 2px; }
+.contact.show .attribute h2 a { float: right; font-size: 10px; }
+
+.contact.show .attributes ul { margin: 0.5em 0 2em 2em; font-size: 11px; }
+
+
+/* Subscribers */
+.subscriber.show #subscriptions { margin: 2em 200px; }
+.subscriber.show #subscriptions table tr td { border: 1px solid #CCCCCC; width: 100%; }

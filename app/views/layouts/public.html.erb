@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title><%= BRAND %> - <%= @page_title %></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="copyright" content="Copyright <%= Time.now.year -%>, <%= BRAND %>" />
+    <meta name="description" content="Find contract manufacturing, custom chemical, and toll processing companies quickly and easily. Chemical Insights creates innovative sourcing solutions for the chemical and pharmaceutical industries." />
+    <meta name="keywords" content="chemical, chemicals, insight, insights, producer, produce, manufacturer, manufacturing, manufacture, tolling, toll, processing, process, custom, contract, exclusive, fine, chemistry, service, synthesis, source, pharmaceutical, database, list, listing" />
+    <meta name="author" content="Nova Fabrica, Inc." />
+    <meta name="robots" content="follow,index" />
+    <meta name="revisit-after" content="3 days" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <%= include_stylesheets('public', :media => :all) %>
+    </script>
+    
+    <%= yield :head %>
+  </head>
+  <body class="<%= params[:body_class].parameterize if params[:body_class] %>">
+    <%= render(:partial => 'layouts/ie6_alert') %>
+
+    <div class="container">
+
+      <div id="header">
+        <div id="logo" >
+          <h1><%= link_to(BRAND, root_path) %></h1>
+        </div>
+        <%# render(:partial => 'layouts/public_navigation') %>
+      </div>
+
+      <%- unless current_page?(root_path) -%>
+        <h1 id="page-title">
+          <%= @page_title || BRAND %>
+        </h1>
+      <%- end -%>
+
+      <div id="messages">
+        <%- flash.each do |key, msg| -%>require 'spec_helper'
+        
+          <%= content_tag(:div, msg, :class => "#{key} message", :id => "#{key}_message") %>
+        <%- end -%>
+      </div>
+
+			<div id="content">
+			  <%= yield %>
+      </div>
+
+    </div><!-- container -->
+  </body>
+</html>
+
