@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 gem 'rails', '3.0.3'
-gem 'mysql'
+gem 'mysql2'
 gem 'delayed_job', '2.1.0.pre'
 gem 'nice_password'
 gem "will_paginate", "3.0.pre2"
