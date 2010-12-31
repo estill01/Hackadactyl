@@ -12,10 +12,10 @@ javascripts:
         - public/javascripts/tabs.js
         
 stylesheets:
-    main:
-        - public/stylesheets/master.css
     public:
-        - public/stylesheets/public/*.css
+         - stylesheets/compiled/screen.css
+    print:
+         - stylesheets/compiled/print.css
     staff:
          - public/stylesheets/staff/main.css
          - public/stylesheets/staff/general.css
@@ -25,3 +25,4 @@ stylesheets:
          - public/stylesheets/staff/page_styles.css
          - public/stylesheets/staff/pagination.css
 
+        

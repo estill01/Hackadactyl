@@ -8,6 +8,7 @@ gem 'paperclip'
 gem 'capistrano'
 gem 'capistrano-ext'
 gem 'jammit'
+gem "compass", ">= 0.10.6"
 gem "exception_notification", :git => "http://github.com/rails/exception_notification.git", :require => 'exception_notifier'
 gem "dynamic_form"
 
