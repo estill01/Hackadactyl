@@ -1,6 +1,6 @@
 GIT
   remote: http://github.com/rails/exception_notification.git
-  revision: 192a49a02d63d28b23ed41cebadfedd490929cf1
+  revision: 192a49a
   specs:
     exception_notification (1.0.0)
 
