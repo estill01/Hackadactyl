@@ -15,7 +15,6 @@ config/database.yml
 coverage/*
 db/schema.rb
 public/system/*
-public/images/*
 public/pdfs/*
 doc/TODO.txt
 mkmf.log
