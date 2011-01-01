@@ -13,9 +13,9 @@ javascripts:
         
 stylesheets:
     public:
-         - stylesheets/compiled/screen.css
+         - public/stylesheets/compiled/screen.css
     print:
-         - stylesheets/compiled/print.css
+         - public/stylesheets/compiled/print.css
     staff:
          - public/stylesheets/staff/main.css
          - public/stylesheets/staff/general.css

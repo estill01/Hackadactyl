@@ -40,4 +40,7 @@ module Hackadactyl
     config.filter_parameters += [:password]
     config.autoload_paths += %W(#{config.root}/lib) 
   end
+  
+  MAIL_CHIMP = Hominid::API.new('f4ce57a0baf7e1b0d6dd4c02e4a6d32d-us2', {:send_goodbye => false, :send_notify => false, :double_opt => false, :send_welcome => true})
 end
+

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   before_filter :correct_accept_headers
-
+  
   def correct_accept_headers
     # Used to fix acceptence header in ie and safari.
     # NB remember sort needs to modify so keep it sort!

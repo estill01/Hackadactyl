@@ -1,6 +1,6 @@
 Hackadactyl::Application.routes.draw do
 
-  root :to => 'static_pages#show'
+  root :to => 'static_pages#show', :name => "home"
   get 'site/:name' =>  'static_pages#show'
 
   namespace :staff do
