@@ -27,11 +27,6 @@
     </dl>
     
     <dl>
-      <dt><%= f.label 'previous_password' %></dt>
-      <dd><%= f.password_field(:previous_password) %></dd>
-    </dl>
-    
-    <dl>
       <dt><%= f.label 'email' %></dt>
       <dd><%= f.text_field(:email) %></dd>
     </dl>
@@ -42,6 +37,12 @@
     </dl>
     
     <% end %>
+    
+    <dl>
+      <dt><%= f.label 'previous_password' %></dt>
+      <dd><%= f.password_field(:previous_password) %></dd>
+    </dl>
+      
     <dl>
       <dt><%= f.label 'password' %></dt>
       <dd><%= f.password_field(:password) %></dd>
