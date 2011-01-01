@@ -1,2 +1,24 @@
-<%= form_for Client.new do |f| %>
+<%= form_for Client.new, :html => {:class => "basic-form"} do |f| %>
+<legend>Signup For <%= BRAND %></legend>
+
+  <dl>
+    <dt><%= f.label 'first_name' %></dt>
+    <dd><%= f.text_field(:first_name) %></dd>
+  </dl>
+
+  <dl>
+    <dt><%= f.label 'last_name' %></dt>
+    <dd><%= f.text_field(:last_name) %></dd>
+  </dl>
+  
+  <dl>
+     <dt><%= f.label 'email' %></dt>
+     <dd><%= f.text_field(:email) %></dd>
+   </dl>
+   
+   <dl>
+      <dt><%= f.label 'email_confirmation' %></dt>
+      <dd><%= f.text_field(:email_confirmation) %></dd>
+    </dl>
+  
 <% end %>

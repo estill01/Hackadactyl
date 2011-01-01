@@ -1,11 +1,10 @@
 @import "base";
 
 #wrapper {
-  @include container;
 }
 
 .basic-form {
-  @include border-radius(25px); 
+  @include border-radius(25px);
   font-size:16px;
   background:$form-background;
 }

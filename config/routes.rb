@@ -2,6 +2,8 @@ Hackadactyl::Application.routes.draw do
 
   root :to => 'static_pages#show', :name => "home"
   get 'site/:name' =>  'static_pages#show'
+  
+  resources :clients
 
   namespace :staff do
     resource :access, :controller => "access", :except => [:edit, :update] do
