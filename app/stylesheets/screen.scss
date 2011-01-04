@@ -4,7 +4,33 @@
 }
 
 .basic-form {
-  @include border-radius(25px);
   font-size:16px;
   background:$form-background;
+  width:300px;
+  margin:auto;
+  padding:20px;
+  border:solid 2px black;
 }
+  dl {
+    margin:auto;
+    width:200px;
+  }
+  
+  dd {
+    margin:10px 0;
+  }
+  
+  dd input[type='text'] {
+    width:200px;
+    height:25px;
+    @include border-radius(7px);
+  }
+  
+  #get-info-button {
+    margin:30px auto 0 auto;
+    width:100px;
+    height:30px;
+    background:white;
+    border:groove 2px red;
+    display:block;
+  }

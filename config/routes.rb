@@ -1,9 +1,14 @@
 Hackadactyl::Application.routes.draw do
 
   root :to => 'static_pages#show', :name => "home"
-  get 'site/:name' =>  'static_pages#show'
+  get 'site/:name' =>  'static_pages#show', :as => "static_page"
+  get 'account-creation/:token' => 'client#create-account', :as => "create_account"
   
-  resources :clients
+  resources :clients do 
+    member do
+      get :resend_welcome_email
+    end
+  end
 
   namespace :staff do
     resource :access, :controller => "access", :except => [:edit, :update] do

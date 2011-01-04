@@ -10,5 +10,8 @@ class PostOffice < ActionMailer::Base
       :headers  => {"Reply-to" => "#{user.email}"}
     )
   end
+  
+  def welcome_email(client)
+  end
 
 end

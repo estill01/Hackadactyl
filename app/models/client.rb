@@ -4,45 +4,33 @@ class Client < ActiveRecord::Base
   cattr_accessor :per_page
   @@per_page = 15
 
-  attr_accessor       :password, :previous_password
+  attr_accessor       :password, :previous_password, :password_confirmation
   attr_protected      :hashed_password, :salt
 
   # For all roles
 
   validates :first_name,  :length => {:within => 2..50}
   validates :last_name,  :length => {:within => 2..50}
-  validates :username,
-    :length => {:within => 8..25},
-    :format => {:with => /^([a-z0-9_]+)$/i},
-    :uniqueness => { :case_sensitive => false, :message => "already exists. Please try again." }
-  validates :password,
-    :length => {:within => 8..25},
-    :confirmation => true,
-    :on => :create
-
   validates :email,
-    :uniqueness => {:message => "already has an account associated with it."},
-    :format => {:with => STANDARD_EMAIL_REGEX, :message => "is an invalid address"},
-    :confirmation => {:if => :email_changed? }
+    :uniqueness => {:message => "already has an account associated with it.", :allow_nil => true},
+    :format => {:with => STANDARD_EMAIL_REGEX, :message => "is an invalid address"}
 
-  validates :email_confirmation, :presence => true,  :on => :update, :if => :email_changed?
   # validate anytime form params include :password or :email_confirmation
   # i.e. if you send :password, you must send :previous_password
   # You can update :email w/o it as long as :email_confirmation is nil
   validates :previous_password, :auto_password => true, :on => :update
 
-  default_scope :order => "users.last_name ASC, users.first_name ASC"
+  default_scope :order => "clients.last_name ASC, clients.first_name ASC"
 
-  before_create :create_hashed_password
+  before_create :create_account_token
   before_update :update_hashed_password
   after_save :sanitize_object
 
 
-  def create_hashed_password
-    self.salt = self.class.make_salt(self.username)
-    self.hashed_password = self.class.hash_with_salt(self.password, self.salt)
+  def create_account_token
+    self.account_token = Client.create_token(self.full_name)
   end
-
+  
   def update_hashed_password
     if !self.password.blank?
       self.salt = self.class.make_salt(self.username) if self.salt.blank?
@@ -53,7 +41,6 @@ class Client < ActiveRecord::Base
   def sanitize_object
     self.password = nil
     self.password_confirmation = nil
-    self.email_confirmation = nil
   end
 
   def enabled?
@@ -113,7 +100,8 @@ class Client < ActiveRecord::Base
     Digest::SHA1.hexdigest("Take their name #{string} and #{Time.now}")
   end
 
-  private #---------
-
-
+  def send_welcome_email
+    PostOffice.delay.welcome_email(self)
+  end
+  
 end

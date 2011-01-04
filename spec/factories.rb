@@ -24,3 +24,8 @@ end
 
 Factory.define :admin, :parent => :user do |p|
 end
+Factory.define :client do |c|
+  c.first_name "Matthew"
+  c.last_name "Bergman"
+  c.email { Factory.next(:email) }
+end

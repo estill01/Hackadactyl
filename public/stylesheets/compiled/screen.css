@@ -60,12 +60,43 @@ a img {
 
 /* line 6, ../../../app/stylesheets/screen.scss */
 .basic-form {
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -o-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -khtml-border-radius: 25px;
-  border-radius: 25px;
   font-size: 16px;
   background: #bcbcbc;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: solid 2px black;
+}
+
+/* line 14, ../../../app/stylesheets/screen.scss */
+dl {
+  margin: auto;
+  width: 200px;
+}
+
+/* line 19, ../../../app/stylesheets/screen.scss */
+dd {
+  margin: 10px 0;
+}
+
+/* line 23, ../../../app/stylesheets/screen.scss */
+dd input[type='text'] {
+  width: 200px;
+  height: 25px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+}
+
+/* line 29, ../../../app/stylesheets/screen.scss */
+#get-info-button {
+  margin: 30px auto 0 auto;
+  width: 100px;
+  height: 30px;
+  background: white;
+  border: groove 2px red;
+  display: block;
 }
